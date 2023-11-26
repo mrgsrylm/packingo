@@ -65,9 +65,9 @@ func getDefaultOption() *option {
 	}
 
 	_ = v.RegisterTranslation("password", trans, func(ut universalT.Translator) error {
-		return universalT.Add("password", "{0} is not strong enough, password must be at least 6 characters", true)
+		return ut.Add("password", "{0} is not strong enough, password must be at least 6 characters", true)
 	}, func(ut universalT.Translator, fe validator.FieldError) string {
-		t, _ := universalT.T("password", fe.Field())
+		t, _ := ut.T("password", fe.Field())
 		return t
 	})
 
@@ -76,9 +76,9 @@ func getDefaultOption() *option {
 	})
 
 	_ = v.RegisterTranslation("countryCode", trans, func(ut universalT.Translator) error {
-		return universalT.Add("countryCode", "{0} must be at least 2 characters and start with '+'", true)
+		return ut.Add("countryCode", "{0} must be at least 2 characters and start with '+'", true)
 	}, func(ut universalT.Translator, fe validator.FieldError) string {
-		t, _ := universalT.T("countryCode", fe.Field())
+		t, _ := ut.T("countryCode", fe.Field())
 		return t
 	})
 
