@@ -1,4 +1,4 @@
-module github.com/mrgsrylm/commonlibsingo
+module github.com/mrgsrylm/packingo
 
 go 1.21.4
 
